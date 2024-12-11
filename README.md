@@ -15,7 +15,6 @@ There are separate folders for each tool, which solve various purposes, like:
 - QR-Encoder-Decoder: This is a CLI tool that encodes data in the form of a QR code, and can decode QRs as well. 
 - TexToImage: This is a Latex style converter, which will take input in a specific text format and convert it to an image file.
 - My-RPG: This is a completely "on the command line" game, to satisfy the geeky-gamer within you! There will initially be a basic storyline, which you will have to continue to weave into a complete game- in the form of code! Step by step!
-- Code-Buddy: This is a helper in your development process. Ever wanted to get rid of the tedious manual strain of writing code that literally anyone could write. before starting with the actual code? Well, this is your chance to build that 'anyone' for you- to write the tedious boiler plate code for you- so that you could come straight to the business logic!
 
 However, this is not all, as the tools go on getting completed, we'll be adding new ones as well- so that the geek in you is never bored!
 
@@ -23,12 +22,11 @@ However, this is not all, as the tools go on getting completed, we'll be adding 
 - QR-Encoder-Decoder: Any scripting language
 - My-RPG: Node JS
 - TexToImage:
-- Code Buddy: Node JS
 
 # How_to_Setup_&_Contribute
 Fork and clone the repository on your local machine.
 - For QR Encoder and Decoder: The issues for this tool will be open-fpr-all. Create a new branch named after your github username, and do everything in this branch only. The name of the source code file should be your github username(eg amit.py). Commit and push the changes, and create a PR to merge it into the main branch of this repository.
-- For TexToImage, Code-Buddy, and My-RPG: These issues will be either FCFS or competitive. So, you have to commit and push your changes to the main branch only of you forked repo, and then create a PR to get it merged.
+- For TexToImage, and My-RPG: These issues will be either FCFS or competitive. So, you have to commit and push your changes to the main branch only of you forked repo, and then create a PR to get it merged.
 - For repos to be added later: The information will be mentioned as the issues will be published.
 
 # Communications
