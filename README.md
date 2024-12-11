@@ -27,6 +27,7 @@ Fork and clone the repository on your local machine.
 - For QR Encoder and Decoder: The issues for this tool will be open-fpr-all. Create a new branch named after your github username, and do everything in this branch only. The name of the source code file should be your github username(eg amit.py). Commit and push the changes, and create a PR to merge it into the main branch of this repository.
 - For TexToImage, and My-RPG: These issues will be either FCFS or competitive. So, you have to commit and push your changes to the main branch only of you forked repo, and then create a PR to get it merged.
 - For repos to be added later: The information will be mentioned as the issues will be published.
+You can check out Pull Request Template at [PR_Template.md](.github/PR_Template.md)
 
 # Communications
 Whether you are working on a new feature or facing a doubt please feel free to ask us on our [discord](https://discord.gg/uNdynbJ5) channel. We will be happy to help you out.
