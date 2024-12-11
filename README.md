@@ -1,52 +1,94 @@
 # CLI-For-You
-This repo holds a bunch of useful CLI tools, with an RPG game as well!
-# Table of Contents
-- [How it works](#How_it_works)
-- [Tech Stack](#Tech-Stack)
-- [How to Setup & Contribute](#How_to_Setup_&_Contribute)
-- [Communications](#Communications)
-- [Claim an issue](#Claim_an_issue)
-- [Contribution Guidelines](#Contribution-Guidelines)
-- [Mentors](#Mentors)
-  
-# How_it_works
-There are separate folders for each tool, which solve various purposes, like:
-- QR-Encoder-Decoder: This is a CLI tool that encodes data in the form of a QR code, and can decode QRs as well. 
-- TexToImage: This is a Latex style converter, which will take input in a specific text format and convert it to an image file.
-- My-RPG: This is a completely "on the command line" game, to satisfy the geeky-gamer within you! There will initially be a basic storyline, which you will have to continue to weave into a complete game- in the form of code! Step by step!
+Welcome to **CLI-For-You**, a repository packed with useful CLI tools, including an engaging RPG game! Dive into this collection of tools designed to entertain, educate, and assist.
 
-However, this is not all, as the tools go on getting completed, we'll be adding new ones as well- so that the geek in you is never bored!
+---
 
-# Tech-Stack
-- QR-Encoder-Decoder: Any scripting language
-- My-RPG: NodeJS
-- TexToImage: NodeJS
+## 📚 Table of Contents
+- [How It Works](#how-it-works)
+- [Tech Stack](#tech-stack)
+- [How to Setup & Contribute](#how-to-setup--contribute)
+- [Communication](#communication)
+- [Claim an Issue](#claim-an-issue)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Mentors](#mentors)
 
-# How_to_Setup_&_Contribute
-Fork and clone the repository on your local machine.
-- For QR Encoder and Decoder: The issues for this tool will be open-fpr-all. Create a new branch named after your github username, and do everything in this branch only. The name of the source code file should be your github username(eg amit.py). Commit and push the changes, and create a PR to merge it into the main branch of this repository.
-- For TexToImage, and My-RPG: These issues will be either FCFS or competitive. So, you have to commit and push your changes to the main branch only of you forked repo, and then create a PR to get it merged.
-- For repos to be added later: The information will be mentioned as the issues will be published.
-You can check out Pull Request Template at [PR_Template.md](.github/PR_Template.md)
+---
 
-# Communications
-Whether you are working on a new feature or facing a doubt please feel free to ask us on our [discord](https://discord.gg/uNdynbJ5) channel. We will be happy to help you out.
+## 🔍 How It Works
+The repository is organized into separate folders, each containing a distinct tool that serves a specific purpose. Here are the current tools:
 
-# Claim_an_issue
-Comment on the issue. In case of no activity on the issue even after 2 days, the issue will be reassigned. If you have difficulty approaching the issue, feel free to ask on our discord channel.
-- It is also requested to make your entry in [CONTRIBUTORS](contributors.md) markdown file before submitting the PR.
+- **QR-Encoder-Decoder**: A CLI tool to encode data into QR codes and decode QR codes back into data.
+- **TexToImage**: Converts LaTeX-style text input into image files, perfect for creating elegant mathematical visuals or formatted text.
+- **My-RPG**: A command-line-based RPG game for the geeky gamer in you! Start with a basic storyline and expand it step by step through code.
 
-# Contribution_Guidelines
-Please help us follow the best practice to make it easy for the reviewer as well as the contributor. We want to focus on the code quality more than on managing pull request ethics.
+This is just the beginning! As tools are completed, new ones will be added to keep your interest alive and your skills sharp.
 
-- People before code: If any of the following rules are violated, the pull-requests will be rejected. This is to create an easy and joyful onboarding process for new programmers and first-time contributors.
-- Avoid commiting after opening pull request and name the commit as something meaningful, it is highly recommened to follow.
-- Reference the issue numbers in the commit message if it resolves an open issue. Follow the pattern provided here.
-- Provide relevant screenshot/short video for easier review.
-- Pull Request older than 3 days with no response from the contributor shall be marked closed.
-- Avoid duplicate PRs, if need please comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
-- Be polite: Be polite to other community members.
+---
 
-# Mentors
-- Shivansh Gupta: github id- Shivg2901, discord id- 
-- Shaurya Singh: github id- shauryaaa100, discord id- shauryaaa100
+## ⚡ Tech Stack
+Here’s a breakdown of the technologies used for each tool:
+
+- **QR-Encoder-Decoder**: Any scripting language
+- **TexToImage**: Node.js
+- **My-RPG**: Node.js
+
+---
+
+## 🛠️ How to Setup & Contribute
+
+### General Instructions
+1. **Fork and Clone** the repository:
+   ```bash
+   git clone <forked-repo-link>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd CLI-For-You
+   ```
+
+### Tool-Specific Contribution Instructions
+- **QR-Encoder-Decoder**: Issues for this tool are open to everyone. Create a new branch named after your GitHub username and place your code file in the corresponding folder. Name your file `<github-username>.<extension>` (e.g., `amit.py`). Commit, push, and create a PR.
+
+- **TexToImage** and **My-RPG**: These issues are either **first-come, first-serve (FCFS)** or competitive. Commit your changes directly to the main branch of your forked repository, then create a PR.
+
+- **Future Tools**: Instructions will be provided when new issues are published.
+
+> Refer to the [PR_Template.md](.github/PR_Template.md) for detailed guidelines on submitting a pull request.
+
+---
+
+## 💻 Communication
+Have questions or ideas? Let’s collaborate! Reach out via our [Discord channel](https://discord.gg/uNdynbJ5). We’re here to help and excited to hear your thoughts.
+
+---
+
+## 👆 Claim an Issue
+1. Comment on the issue you wish to work on.
+2. If there’s no activity for two days after claiming, the issue may be reassigned.
+3. Stuck? Don’t hesitate to ask for assistance on Discord.
+
+> Don’t forget to make your entry in the [CONTRIBUTORS.md](CONTRIBUTORS.md) file before submitting your PR.
+
+---
+
+## 📋 Contribution Guidelines
+To maintain quality and streamline the review process, please follow these guidelines:
+
+- **People Before Code**: Be respectful and considerate towards community members.
+- **Meaningful Commits**: Use descriptive commit messages and reference related issue numbers.
+- **Show Your Work**: Attach relevant screenshots or short videos to simplify reviews.
+- **Avoid Duplicate PRs**: If required, link the follow-up PR in the comments of the original and close the obsolete one.
+- **PR Response Time**: PRs with no updates for three days may be closed.
+- **Politeness Matters**: Maintain a positive and constructive tone in discussions.
+
+---
+
+## 🤝 Mentors
+- **Shivansh Gupta**
+  - GitHub: [Shivg2901](https://github.com/Shivg2901)
+  - Discord: Shivg2901
+
+- **Shaurya Singh**
+  - GitHub: [shauryaaa100](https://github.com/shauryaaa100)
+  - Discord: shauryaaa100
+
