@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/opencodeiiita/CLI-For-You/issues"
   },
-  "homepage": "https://github.com/opencodeiiita/CLI-For-You#readme"
+  "homepage": "https://github.com/opencodeiiita/CLI-For-You#readme",
+  "dependencies": {
+    "jsdom": "^25.0.1",
+    "katex": "^0.16.15"
+  }
 }
