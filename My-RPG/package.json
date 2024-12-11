@@ -17,5 +17,8 @@
     "chai": "^5.1.2",
     "mocha": "^11.0.1"
   },
-  "type": "module"
+  "type": "module",
+  "bin": {
+    "rpg-game": "./src/index.js"
+  }
 }

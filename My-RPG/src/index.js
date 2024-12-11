@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from 'chalk';
 import readline from 'readline';
 import { GameEngine } from './game-engine/index.js';
