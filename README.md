@@ -3,14 +3,14 @@ This repo holds a bunch of useful CLI tools, with an RPG game as well!
 #Table of Content
 ##Table of Contents
 - [How it works](#How_it_works)
-- [Tech Stack](#Tech-Stack)
+- [Tech Stack](#Tech Stack)
 - [How to Setup & Contribute](#How_to_Setup_&_Contribute)
 - [Communications](#Communications)
 - [Claim an issue](#Claim_an_issue)
 - [Contribution Guidelines](#Contribution-Guidelines)
 - [Mentors](#Mentors)
   
-##How_it_works
+# How_it_works
 There are separate folders for each tool, which solve various purposes, like:
 - QR Encoder and Decoder: This is a CLI tool that encodes data in the form of a QR code, and can decode QRs as well. 
 - TexToImage: This is a Latex style converter, which will take input in a specific text format and convert it to an image file.
@@ -19,26 +19,26 @@ There are separate folders for each tool, which solve various purposes, like:
 
 However, this is not all, as the tools go on getting completed, we'll be adding new ones as well- so that the geek in you is never bored!
 
-##Tech-Stack
+# Tech Stack
 - QR Encoder Decoder: Any scripting language
 - RPG: Node JS
 - TexToImage:
 - Code Buddy: Node JS
 
-#How_to_Setup_&_Contribute
+# How_to_Setup_&_Contribute
 Fork and clone the repository on your local machine.
 - For QR Encoder and Decoder: The issues for this tool will be open-fpr-all. Create a new branch named after your github username, and do everything in this branch only. The name of the source code file should be your github username(eg amit.py). Commit and push the changes, and create a PR to merge it into the main branch of this repository.
 - For TexToImage, Code Buddy, and RPG: These issues will be either FCFS or competitive. So, you have to commit and push your changes to the main branch only of you forked repo, and then create a PR to get it merged.
 - For repos to be added later: The information will be mentioned as the issues will be published.
 
-#Communications
+# Communications
 Whether you are working on a new feature or facing a doubt please feel free to ask us on our [discord](https://discord.gg/uNdynbJ5) channel. We will be happy to help you out.
 
-#Claim_an_issue
+# Claim_an_issue
 Comment on the issue. In case of no activity on the issue even after 2 days, the issue will be reassigned. If you have difficulty approaching the issue, feel free to ask on our discord channel.
 - It is also requested to make your entry in [CONTRIBUTORS](contributors.md) markdown file before submitting the PR.
 
-#Contribution_Guidelines
+# Contribution_Guidelines
 Please help us follow the best practice to make it easy for the reviewer as well as the contributor. We want to focus on the code quality more than on managing pull request ethics.
 
 - People before code: If any of the following rules are violated, the pull-requests will be rejected. This is to create an easy and joyful onboarding process for new programmers and first-time contributors.
@@ -49,6 +49,6 @@ Please help us follow the best practice to make it easy for the reviewer as well
 - Avoid duplicate PRs, if need please comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
 - Be polite: Be polite to other community members.
 
-#Mentors
+# Mentors
 - Shivansh Gupta: github id- Shivg2901, discord id- 
 - Shaurya Singh: github id- shauryaaa100, discord id- shauryaaa100
