@@ -19,8 +19,8 @@ However, this is not all, as the tools go on getting completed, we'll be adding 
 
 # Tech-Stack
 - QR-Encoder-Decoder: Any scripting language
-- My-RPG: Node JS
-- TexToImage:
+- My-RPG: NodeJS
+- TexToImage: NodeJS
 
 # How_to_Setup_&_Contribute
 Fork and clone the repository on your local machine.
