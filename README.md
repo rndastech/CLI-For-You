@@ -1,5 +1,6 @@
 # CLI-For-You
 This repo holds a bunch of useful CLI tools, with an RPG game as well!
+#Table of Content
 ##Table of Contents
 - [How it works](#How_it_works)
 - [Tech Stack](#Tech-Stack)
@@ -9,7 +10,7 @@ This repo holds a bunch of useful CLI tools, with an RPG game as well!
 - [Contribution Guidelines](#Contribution-Guidelines)
 - [Mentors](#Mentors)
   
-#How_it_works
+##How_it_works
 There are separate folders for each tool, which solve various purposes, like:
 - QR Encoder and Decoder: This is a CLI tool that encodes data in the form of a QR code, and can decode QRs as well. 
 - TexToImage: This is a Latex style converter, which will take input in a specific text format and convert it to an image file.
@@ -18,7 +19,7 @@ There are separate folders for each tool, which solve various purposes, like:
 
 However, this is not all, as the tools go on getting completed, we'll be adding new ones as well- so that the geek in you is never bored!
 
-#Tech-Stack
+##Tech-Stack
 - QR Encoder Decoder: Any scripting language
 - RPG: Node JS
 - TexToImage:
