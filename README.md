@@ -1,7 +1,6 @@
 # CLI-For-You
 This repo holds a bunch of useful CLI tools, with an RPG game as well!
-#Table of Content
-##Table of Contents
+# Table of Contents
 - [How it works](#How_it_works)
 - [Tech Stack](#Tech-Stack)
 - [How to Setup & Contribute](#How_to_Setup_&_Contribute)
