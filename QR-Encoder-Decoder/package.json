@@ -1,0 +1,19 @@
+{
+  "name": "qr-encoder-decoder",
+  "version": "1.0.0",
+  "description": "A tool to encode data into QR codes, and to decode QR codes through the command line.",
+  "main": "index.js",
+  "scripts": {
+    "test": "'username'.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencodeiiita/CLI-For-You.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opencodeiiita/CLI-For-You/issues"
+  },
+  "homepage": "https://github.com/opencodeiiita/CLI-For-You#readme"
+}
