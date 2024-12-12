@@ -7,7 +7,7 @@ image(.jpg or .png) file. The name of the image file that will store the generat
 - Decoding: The input image file with the QR will be the input, and the name of the output file must be taken from the user, with the correct extension(.jpg,.txt etc),
    from which it was encoded.
 # ⚡ Tech-Stack
-Any scripting language is allowed- for example python, nodejs, bash etc. So no worries!
+**Any scripting language is allowed**- for example python, nodejs, bash etc. So no worries!
 
 ## 🛠️ How to Setup & Contribute
 
