@@ -174,7 +174,7 @@ Game Over! Thanks for playing.
 
 Comment on the issue to claim it. If there’s no activity on your claim after two days, it may be reassigned to another contributor. Stuck? Ask for help on our Discord channel – no player gets left behind!
 
-- Don’t forget to make your entry in the [CONTRIBUTORS](CONTRIBUTORS.md) file before submitting your PR.
+- Don’t forget to make your entry in the [CONTRIBUTORS](/CONTRIBUTORS.md) file before submitting your PR.
 
 ---
 
