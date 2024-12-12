@@ -47,7 +47,8 @@ Here’s a breakdown of the technologies used for each tool:
    ```
 
 ### Tool-Specific Contribution Instructions
-- **QR-Encoder-Decoder**: Issues for this tool are open to everyone. Create a new branch named after your GitHub username and place your code file in the corresponding folder. Name your file `<github-username>.<extension>` (e.g., `amit.py`). Commit, push, and create a PR.
+For more details, you can visit the tool specific readme files in each folder.
+- **QR-Encoder-Decoder**: Issues for this tool are open to everyone. Create a new branch named after your GitHub username and create a folder with name as your github username. Place your code in the corresponding folder. Commit, push, and create a PR.
 
 - **TexToImage** and **My-RPG**: These issues are either **first-come, first-serve (FCFS)** or competitive. Commit your changes directly to the main branch of your forked repository, then create a PR.
 
