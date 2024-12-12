@@ -54,7 +54,7 @@ Have questions or ideas? Let’s collaborate! Reach out via our [Discord channel
 2. If there’s no activity for two days after claiming, the issue may be reassigned.
 3. Stuck? Don’t hesitate to ask for assistance on Discord.
 
-> Don’t forget to make your entry in the [CONTRIBUTORS.md](/CONTRIBUTORS.md) file before submitting your PR.
+> Don’t forget to make your entry in the [CONTRIBUTORS.md](/contributors.md) file before submitting your PR.
 
 ---
 
