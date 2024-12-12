@@ -5,7 +5,7 @@ Welcome to **CLI-For-You**, a repository packed with useful CLI tools, including
 
 ## 📚 Table of Contents
 - [How It Works](#how-it-works)
-- [Tech Stack](#tech-stack)
+- [Tech Stack](#⚡-Tech-Stack)
 - [How to Setup & Contribute](#how-to-setup-and-contribute)
 - [Communication](#communication)
 - [Claim an Issue](#claim-an-issue)
