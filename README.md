@@ -6,7 +6,7 @@ Welcome to **CLI-For-You**, a repository packed with useful CLI tools, including
 ## 📚 Table of Contents
 - [How It Works](#how-it-works)
 - [Tech Stack](#tech-stack)
-- [How to Setup & Contribute](#how-to-setup--contribute)
+- [How to Setup & Contribute](#how-to-setup-and-contribute)
 - [Communication](#communication)
 - [Claim an Issue](#claim-an-issue)
 - [Contribution Guidelines](#contribution-guidelines)
@@ -34,7 +34,7 @@ Here’s a breakdown of the technologies used for each tool:
 
 ---
 
-## 🛠️ How to Setup & Contribute
+## 🛠️ How to Setup and Contribute
 
 ### General Instructions
 1. **Fork and Clone** the repository:
