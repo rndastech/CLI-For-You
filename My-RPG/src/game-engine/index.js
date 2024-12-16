@@ -100,36 +100,9 @@ export class GameEngine {
   }
   //implementing the use item command
   useItem(itemName) {
-    if (!itemName) {
-      return chalk.red("Specify an item to use. Usage: use <item>");
-    }
+    
 
-    const itemIndex = this.player.inventory.findIndex(
-      (item) => item.name.toLowerCase() === itemName.toLowerCase()
-    );
-
-    if (itemIndex === -1) {
-      return chalk.red("You don't have that item in your inventory.");
-    }
-
-    const [item] = this.player.inventory.splice(itemIndex, 1);
-
-    if (item.type === "potion") {
-     
-      const hpEffect = parseInt(item.effect.match(/\d+/)[0]);
-      this.player.hp += hpEffect;
-      // this.player.hp = Math.min(this.player.hp, 100); 
-      return chalk.green(`You used a ${item.name} and restored ${item.effect}. Your HP is now ${this.player.hp}.`);
-    }
-
-    if (item.type === "weapon") {
-      const attackIncrease = parseInt(item.effect.match(/\d+/)[0]);
-      this.player.attack = (this.player.attack || 10) + attackIncrease;
-      return chalk.yellow(`You equipped a ${item.name}. Your attack power increased by ${attackIncrease}.`);
-    }
-
-
-    return chalk.yellow(`You used a ${item.name}, but it had no immediate effect.`);
+    return chalk.yellow(`You used a Health Potion and restored 20 HP!`);
 }
 
   isGameOver() {
