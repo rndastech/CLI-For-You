@@ -15,7 +15,7 @@ if (!fs.existsSync(inputFilePath)) {
     process.exit(1);
 }
 
-const inputData = fs.readFileSync(inputFilePath, 'utf8');
+const inputData = fs.readFileSync(inputFilePath).toString("base64");
 
 try {
     QRCode.toFile(outputFilePath, inputData).then( () => {
