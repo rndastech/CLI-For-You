@@ -1,0 +1,3 @@
+python 
+qrcode library in python
+pillow library in python
