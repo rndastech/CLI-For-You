@@ -8,9 +8,13 @@ async function generateQRCode(inputFile, outputImage) {
             return;
         }
         const fileContent = fs.readFileSync(inputFile);
-        const base64Content = fileContent.toString('base64');
-
-        await QRCode.toFile(outputImage, base64Content, {
+        let qrContent;
+        if (inputFile.endsWith('.txt')) {
+            qrContent = fileContent.toString('utf-8');
+        } else {
+            qrContent = fileContent.toString('base64'); 
+        }
+        await QRCode.toFile(outputImage, qrContent, {
             errorCorrectionLevel: 'H',
             type: 'png',
             color: {
