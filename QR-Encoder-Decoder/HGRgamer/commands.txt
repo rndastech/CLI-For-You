@@ -1,0 +1,2 @@
+npm install qrcode
+node index.js <input file> <output file>
