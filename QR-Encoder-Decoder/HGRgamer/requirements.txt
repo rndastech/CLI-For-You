@@ -1,0 +1,1 @@
+requires nodejs and qrcode library
