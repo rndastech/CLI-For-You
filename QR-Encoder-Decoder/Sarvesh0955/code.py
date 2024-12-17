@@ -1,24 +1,32 @@
 import sys
 import os
 import qrcode
+import base64
 
 def generate_qr_code(input_file, output_image):
     if not os.path.exists(input_file):
-        print("file does not exist.")
+        print("File does not exist.")
         sys.exit(1)
     
     try:
-        with open(input_file, 'r', encoding='utf-8', errors='ignore') as file:
+        with open(input_file, 'rb') as file:
             file_contents = file.read()
         
+        base64_contents = base64.b64encode(file_contents).decode('utf-8')
+        
+        max_binary_size = 2953 
+        if len(base64_contents) > max_binary_size:
+            print(f"Error: The file size exceeds the maximum QR code capacity of {max_binary_size} bytes.")
+            return
+
         qr = qrcode.QRCode(
-            version=None,  
+            version=40,  
             error_correction=qrcode.constants.ERROR_CORRECT_L,
             box_size=10,
             border=4,
         )
         
-        qr.add_data(file_contents)
+        qr.add_data(base64_contents)
         qr.make(fit=True)
         
         img = qr.make_image(fill_color="black", back_color="white")
