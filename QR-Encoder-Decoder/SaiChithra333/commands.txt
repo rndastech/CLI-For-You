@@ -1,0 +1,4 @@
+
+node index.js encode "Your Text Here" output.png
+
+node index.js decode output.png
