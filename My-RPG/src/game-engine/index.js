@@ -6,7 +6,7 @@ export class GameEngine {
   constructor() {
     this.player = {
       name: "",
-      hp: 40,
+      hp: 100,
       level: 1,
       attack: 50,
       inventory: [],
