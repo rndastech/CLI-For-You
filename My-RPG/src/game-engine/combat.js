@@ -66,7 +66,7 @@ function checkInput(input, targetString, player, enemy) {
         `${player.attack}`
       )} damage to ${enemy.name}! ⚔️`
     );
-    enemy.hp -= 20;
+    enemy.hp -= player.attack;
     enemy.hp = Math.max(enemy.hp, 0);
     if (enemy.hp <= 0) {
       console.log(
@@ -82,7 +82,7 @@ function checkInput(input, targetString, player, enemy) {
         `${enemy.attack}`
       )} damage! 💥`
     );
-    player.hp -= 15;
+    player.hp -= enemy.hp;
     player.hp = Math.max(player.hp, 0); // Use Math.max here
     if (player.hp <= 0) {
       console.log(
@@ -119,7 +119,7 @@ function startTimer(totalTime, player, enemy) {
           enemy.name
         } strikes you for ${chalk.red(`${enemy.hp}`)} damage! 💥`
       );
-      player.hp -= 15;
+      player.hp -= enemy.attack;
       player.hp = Math.max(player.hp, 0);
       displayHealth(player, enemy);
       if (player.hp <= 0) {
@@ -141,7 +141,7 @@ let player = {
   name: "Vardaan",
   hp: 100,
   level: 1,
-  attack: 15,
+  attack: 25,
   inventory: [],
   itemInHand: "none",
 };
@@ -150,7 +150,7 @@ let enemy = {
   name: "Goblin",
   hp: 100,
   timeLimit: 10,
-  attack: 10,
+  attack: 50,
   stringList: [
     "attack with fury",
     "defend your honor",
