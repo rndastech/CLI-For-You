@@ -2,7 +2,7 @@
 A simple tool to encode data in the form of QR Codes, and decrypt data from QRs as well, all through the command- line!
 
 # How-It-Works
-- Encoding: The input will be a file(of any format), which will be encoded by this tool in the form of a QR Code, which will be returned in the form of an 
+- Encoding: The input will be a file(of any format, for example txt, png, mp3 etc), which will be encoded by this tool in the form of a QR Code, which will be returned in the form of an 
 image(.jpg or .png) file. The name of the image file that will store the generated qr must be taken as input from the user.
 - Decoding: The input image file with the QR will be the input, and the name of the output file must be taken from the user, with the correct extension(.jpg,.txt etc),
    from which it was encoded.

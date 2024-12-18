@@ -1,1 +1,1 @@
-python encode.py <input_file> <output_image>
+node encoder.js <input_file> <output_qr_image>

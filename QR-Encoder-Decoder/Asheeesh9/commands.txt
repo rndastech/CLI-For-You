@@ -1,0 +1,3 @@
+npm install qrcode
+node encoder.js <input file> <output file>
+example: node encoder.js abc.txt qr.png

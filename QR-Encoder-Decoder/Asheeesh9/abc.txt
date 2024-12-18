@@ -1,0 +1,3 @@
+My name is ashish
+please generate a qr for this
+I will scan and run it on gpay
