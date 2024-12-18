@@ -1,6 +1,6 @@
 import readline from "readline";
 import keypress from "keypress";
-import chalk from "chalk"; 
+import chalk from "chalk";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -8,31 +8,22 @@ const rl = readline.createInterface({
   terminal: true,
 });
 
-let playerHealth = 100;
-let enemyHealth = 100;
-const maxHealth = 100;
-const timeLimit = 10;
 let timer;
 let combatInProgress = true;
 let inputLength = 0;
 
-const stringList = [ // change strings here
-  "attack with fury", 
-  "defend your honor",
-  "strike with precision",
-  "take no prisoners",
-];
-
-function startCombat() {
+function startCombat(player, enemy) {
   if (!combatInProgress) return;
 
+  console.log(`You are attacked by ${enemy.name}`);
+
   const targetString =
-    stringList[Math.floor(Math.random() * stringList.length)]; // change the sequence here
+    enemy.stringList[Math.floor(Math.random() * enemy.stringList.length)];
 
   console.log(`\nType the following: "${chalk.cyan(targetString)}"`);
 
   console.log("");
-  startTimer(timeLimit);
+  startTimer(enemy.timeLimit, player, enemy);
 
   keypress(process.stdin);
   process.stdin.on("keypress", () => {
@@ -41,16 +32,16 @@ function startCombat() {
 
   rl.question("Your input: ", (input) => {
     clearInterval(timer);
-    checkInput(input, targetString);
+    checkInput(input, targetString, player, enemy);
   });
 
   process.stdin.setRawMode(true);
   process.stdin.resume();
 }
 
-function displayHealth() {
-  console.log(`\n${chalk.green("Player Health")}: ${playerHealth} / ${maxHealth}`);
-  console.log(`\n${chalk.red("Enemy Health")}: ${enemyHealth} / ${maxHealth}`);
+function displayHealth(player, enemy) {
+  console.log(`\n${chalk.green("Player Health")}: ${player.hp}`);
+  console.log(`\n${chalk.red("Enemy Health")}: ${enemy.hp}`);
 }
 
 function drawProgressBar(totalTime, timeLeft) {
@@ -65,36 +56,52 @@ function drawProgressBar(totalTime, timeLeft) {
   process.stdout.write(`${chalk.yellow("Time left:")} [${bar}] ${timeLeft}s`);
   readline.clearLine(process.stdout, 1);
   process.stdout.write("\n");
-  readline.cursorTo(process.stdout, 12 + inputLength);
+  readline.cursorTo(process.stdout, 12 + inputLength); 
 }
 
-function checkInput(input, targetString) {
+function checkInput(input, targetString, player, enemy) {
   if (input === targetString) {
-    console.log(`${chalk.green("\nSuccess!")} You dealt ${chalk.red("20")} damage to the enemy! ⚔️`);
-    enemyHealth -= 20;
-    if (enemyHealth <= 0) {
-      console.log(`${chalk.green("\nYou defeated the enemy! 🎉")}`);
+    console.log(
+      `${chalk.green("\nSuccess!")} You dealt ${chalk.red(
+        `${player.attack}`
+      )} damage to ${enemy.name}! ⚔️`
+    );
+    enemy.hp -= 20;
+    enemy.hp = Math.max(enemy.hp, 0);
+    if (enemy.hp <= 0) {
+      console.log(
+        `${chalk.green(
+          `Congrats ${player.name}\nYou defeated the ${enemy.name}! 🎉`
+        )}`
+      );
       combatInProgress = false;
     }
   } else {
-    console.log(`${chalk.red("\nMiss!")} The enemy strikes you for ${chalk.red("15")} damage! 💥`);
-    playerHealth -= 15;
-    if (playerHealth <= 0) {
-      console.log(`${chalk.red("\nYou were defeated by the enemy! 😞")}`);
+    console.log(
+      `${chalk.red("\nMiss!")} ${enemy.name} strikes you for ${chalk.red(
+        `${enemy.attack}`
+      )} damage! 💥`
+    );
+    player.hp -= 15;
+    player.hp = Math.max(player.hp, 0); // Use Math.max here
+    if (player.hp <= 0) {
+      console.log(
+        `${chalk.red(`\nYou were defeated by the ${enemy.name}! 😞`)}`
+      );
       combatInProgress = false;
     }
   }
 
-  displayHealth();
+  displayHealth(player, enemy);
 
   if (combatInProgress) {
-    setTimeout(startCombat, 1000);
+    setTimeout(() => startCombat(player, enemy), 1000);
   } else {
     rl.close();
   }
 }
 
-function startTimer(totalTime) {
+function startTimer(totalTime, player, enemy) {
   let timeLeft = totalTime;
 
   drawProgressBar(totalTime, timeLeft);
@@ -107,15 +114,22 @@ function startTimer(totalTime) {
 
     if (timeLeft <= 0) {
       clearInterval(timer);
-      console.log(`${chalk.red("\n\nTime's up!")} The enemy strikes you for ${chalk.red("15")} damage! 💥`);
-      playerHealth -= 15;
-      displayHealth();
-      if (playerHealth <= 0) {
-        console.log(`${chalk.red("\nYou were defeated by the enemy! 😞")}`);
+      console.log(
+        `${chalk.red(`\n\nTime's up ${player.name}!`)} ${
+          enemy.name
+        } strikes you for ${chalk.red(`${enemy.hp}`)} damage! 💥`
+      );
+      player.hp -= 15;
+      player.hp = Math.max(player.hp, 0);
+      displayHealth(player, enemy);
+      if (player.hp <= 0) {
+        console.log(
+          `${chalk.red(`\nYou were defeated by the ${enemy.name}! 😞`)}`
+        );
         combatInProgress = false;
       }
       if (combatInProgress) {
-        setTimeout(startCombat, 1000);
+        setTimeout(() => startCombat(player, enemy), 1000);
       } else {
         rl.close();
       }
@@ -123,4 +137,28 @@ function startTimer(totalTime) {
   }, 1000);
 }
 
-startCombat();
+let player = {
+  name: "Vardaan",
+  hp: 100,
+  level: 1,
+  attack: 15,
+  inventory: [],
+  itemInHand: "none",
+};
+
+let enemy = {
+  name: "Goblin",
+  hp: 100,
+  timeLimit: 10,
+  attack: 10,
+  stringList: [
+    "attack with fury",
+    "defend your honor",
+    "strike with precision",
+    "take no prisoners",
+  ],
+};
+
+startCombat(player, enemy);
+
+export default startCombat;
