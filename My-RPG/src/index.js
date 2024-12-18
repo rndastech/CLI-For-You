@@ -2,6 +2,7 @@
 
 import chalk from 'chalk';
 import readline from 'readline';
+import figlet from 'figlet';
 import { GameEngine } from './game-engine/index.js';
 
 const rl = readline.createInterface({
@@ -10,6 +11,8 @@ const rl = readline.createInterface({
 });
 
 const game = new GameEngine();
+
+console.log(chalk.green(figlet.textSync('RPG CLI Game', { horizontalLayout: 'full' })));
 
 console.log(chalk.green("Welcome to the RPG CLI Game!"));
 console.log(chalk.blue("Let's start by entering your name."));
@@ -25,14 +28,18 @@ rl.question(chalk.yellow("Enter your name: "), (name) => {
   }
 
   console.log(chalk.green("Type 'help' to see the list of commands."));
+  process.stdout.write('> ');
 
   rl.on('line', (input) => {
     const output = game.handleCommand(input.trim());
-    console.log(output);
+    if(typeof output == "string")
+      console.log(output);
 
     if (game.isGameOver()) {
       console.log(chalk.red("Game Over! Thanks for playing."));
       rl.close();
+    }else{
+      process.stdout.write('> ');
     }
   });
 });

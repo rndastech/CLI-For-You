@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import Item from "./Item.js";
+import displayStory from "./story.js";
 
 export class GameEngine {
   constructor() {
@@ -39,8 +40,11 @@ export class GameEngine {
     switch (cmd) {
       case "help":
         return chalk.blue(
-          "Available commands: help, stats, explore, attack, pickup <item>, inventory, use <item>, quit"
+          "Available commands: help, storymode, stats, explore, attack, pickup <item>, inventory, use <item>, quit"
         );
+      case "storymode":
+        displayStory();
+        return;
       //updated the stats command to include the attack points
       case "stats":
         return chalk.magenta(
