@@ -1,21 +1,7 @@
 import chalk from 'chalk';
 import figlet from 'figlet';
-import readlineSync from 'readline-sync';
 import cliProgress from 'cli-progress';
 import ora from 'ora';
-
-function welcomeMsg() {
-    console.log(chalk.green(figlet.textSync('RPG CLI Game', { horizontalLayout: 'full' })));
-    console.log(chalk.cyan('Welcome to the RPG CLI Game!'));
-    console.log(chalk.yellow('Enter your name to begin your adventure:'));
-
-    const playerName = readlineSync.question('> ');
-
-    console.log(chalk.cyan('\nWelcome, ' + chalk.bold.bgGreen(playerName) + '!'));
-    console.log(chalk.yellow('Type "storymode" to begin your journey or "help" to see available commands.\n'));
-
-    return playerName;
-}
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -75,42 +61,14 @@ async function displayStory() {
             await sleep(75);
         }
         if(!story[i].line.endsWith('\n')) process.stdout.write(" ");
-        await sleep(1000);
+        await sleep(1000);//a pause after each sentence
     }
 
-    console.log(chalk.blue('==============================================================\n'));
+    console.log(chalk.blue('=============================================================='));
     console.log(chalk.cyan('Your journey begins now, traveler...'));
 
     //exiting for now
     process.exit(0);
 }
 
-function help() {
-    console.log(chalk.yellow('Available Commands:'));
-    console.log(chalk.green('storymode') + ' - Begin your adventure.');
-    console.log(chalk.green('help') + ' - Show this help menu.');
-    console.log(chalk.green('exit') + ' - Exit the game.\n');
-}
-
-async function startGame() {
-    const playerName = welcomeMsg();
-    
-    while (true) {
-        const input = readlineSync.question('> ').toLowerCase().trim();
-        
-        //could use switch
-        if (input === 'storymode' || input === 'sm') {
-            await displayStory();
-            break;
-        } else if (input === 'help') {
-            showHelp();
-        } else if (input === 'exit') {
-            console.log(chalk.green('Thanks for playing!'));
-            break;
-        } else {
-            console.log(chalk.red('Unknown command. Type "help" for a list of available commands.'));
-        }
-    }
-}
-
-await startGame();
+export default displayStory;
