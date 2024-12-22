@@ -12,7 +12,7 @@ This README details the implementation of a sound playback system for an RPG CLI
 ### Library: `sound-play`
 
 `sound-play` was selected for the following reasons:
-- **Cross-Platform**: Works seamlessly on Windows, macOS, and Linux.
+- **Cross-Platform**: Works seamlessly on Windows, macOS.
 - **Ease of Use**: Simple API with minimal configuration required.
 - **No Dependencies**: Does not require additional software like VLC.
 - **Active Support**: Lightweight and actively maintained.
