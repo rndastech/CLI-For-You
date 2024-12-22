@@ -1,0 +1,21 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ffmpeg": "^0.0.4",
+    "howler": "^2.2.4",
+    "play-sound": "^1.1.6",
+    "sound-play": "^1.1.0",
+    "sox": "^0.1.0",
+    "soz": "^0.0.0"
+  }
+}
