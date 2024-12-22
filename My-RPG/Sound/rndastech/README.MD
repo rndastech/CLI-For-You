@@ -3,7 +3,7 @@
 ## Objective
 This README details the implementation of a sound playback system for an RPG CLI game using Node.js. The goal was to identify and demonstrate a Node.js library that meets the following requirements:
 
-- **Cross-platform compatibility** (Windows, macOS, Linux).
+- **Cross-platform compatibility** (Windows, macOS).
 - **Ease of use** with simple function calls.
 - **No extra software dependencies** required for playback.
 - **Sound quality** with normal, undistorted playback.
